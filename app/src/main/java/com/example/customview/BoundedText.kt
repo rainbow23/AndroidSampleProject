@@ -55,6 +55,12 @@ class BoundedText : AppCompatTextView {
         super.onLayout(changed, left, top, right, bottom)
         Log.d("Test1", "onLayout( changed: $changed, left: $left, top: $top, right: $right, bottom: $bottom")
 
+        // X方向のずれを修正したい： leftは0なので取得できない
+        val rect = Rect()
+        getLineBounds(0, rect)
+        Log.d("Test1", "onLayout( rect.top: ${rect.top}, rect.left: ${rect.left}, rect.right: ${rect.right}, text: $text, rect: $rect")
+        //onLayout( rect.top: 0, rect.left: 0, rect.right: 688, text: TextView1TextView2TextView3あああ, rect: Rect(0, 0 - 688, 68)
+
         val layout = layout
         getTightBounds(layout, 0, mTextBounds)
         if (layout.lineCount > 1) { // Multi-line
@@ -128,6 +134,13 @@ class BoundedText : AppCompatTextView {
             //getPaint().measureText(s.toString());
             paint.getTextBounds(s.toString(), 0, s.length, bounds)
         }
+
+        // X方向のずれを修正したい： leftは0なので取得できない
+        val rect = Rect()
+        getLineBounds(0, rect)
+        Log.d("Test1", "getTightBounds( rect.top: ${rect.top}, rect.left: ${rect.left}, rect.right: ${rect.right}, text: $text, rect: $rect")
+        //getTightBounds( rect.top: 0, rect.left: 0, rect.right: 688, text: TextView1TextView2TextView3あああ, rect: Rect(0, 0 - 688, 68)
+
         val baseline = layout.getLineBaseline(line)
         Log.d("Test1", "getTightBounds( bounds.top: " + bounds.top + ", bounds.bottom: " + bounds.bottom)
         Log.d("Test1", "getTightBounds( baseline: $baseline")
