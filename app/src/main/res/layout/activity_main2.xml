@@ -6,67 +6,78 @@
         android:orientation="vertical">
 
 <!-- Y軸 top -->
+    <!-- paddingが正しく計算できる -->
     <com.example.customview.BoundedText
         android:id="@+id/textView1"
         android:layout_width="250dp"
         android:layout_height="120dp"
-        android:layout_marginTop="5dp"
-        android:text="TextView1TextView2TextView3"
+        android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
         android:background="#d6ffd8"
         android:gravity="top|left"
+        android:paddingBottom="55dp"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
 
+    <!-- paddingが正しく計算できる -->
     <com.example.customview.BoundedText
         android:id="@+id/textView2"
         android:layout_width="250dp"
         android:layout_height="120dp"
         android:layout_marginTop="5dp"
-        android:text="TextView1TextView2TextView3"
+        android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
+        android:paddingBottom="55dp"
         android:background="#d6ffd8"
         android:gravity="top|center"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
 
+    <!-- paddingが正しく計算できる -->
     <com.example.customview.BoundedText
         android:id="@+id/textView3"
         android:layout_width="250dp"
         android:layout_height="120dp"
         android:layout_marginTop="5dp"
-        android:text="TextView1TextView2TextView3"
+        android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
+        android:paddingBottom="55dp"
         android:background="#d6ffd8"
         android:gravity="top|right"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
 
 <!-- Y軸 center -->
+    <!-- paddingが正しく計算できる -->
     <com.example.customview.BoundedText
         android:id="@+id/textView4"
         android:layout_width="250dp"
         android:layout_height="120dp"
-        android:text="TextView1TextView2TextView3あああ"
+        android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
+        android:paddingBottom="55dp"
         android:background="#8eb5ff"
         android:gravity="center_vertical|left"
         android:lineSpacingExtra="1dp"
         android:textSize="18sp"/>
 
+    <!-- paddingが正しく計算できる -->
     <com.example.customview.BoundedText
         android:id="@+id/textView5"
         android:layout_width="250dp"
         android:layout_height="120dp"
         android:layout_marginTop="5dp"
-        android:text="TextView1TextView2TextView3あああ"
+        android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
+        android:paddingBottom="55dp"
         android:background="#8eb5ff"
         android:gravity="center_vertical|center_horizontal"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
 
+    <!-- paddingが正しく計算できる -->
     <com.example.customview.BoundedText
         android:id="@+id/textView6"
         android:layout_width="250dp"
         android:layout_height="120dp"
         android:layout_marginTop="5dp"
-        android:text="TextView1TextView2TextView3あああ"
+        android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
+        android:paddingBottom="55dp"
         android:background="#8eb5ff"
         android:gravity="center_vertical|right"
         android:lineSpacingExtra="4dp"

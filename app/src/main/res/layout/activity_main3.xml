@@ -6,67 +6,79 @@
     android:orientation="vertical">
 
 <!-- Y軸 bottom -->
+    <!-- gravityにbottomが設定されている場合、paddingが正しく計算できない -->
     <com.example.customview.BoundedText
         android:id="@+id/textView11"
         android:layout_width="250dp"
         android:layout_height="120dp"
-        android:text="TextView1TextView2TextView3あああ"
+        android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
+        android:paddingBottom="55dp"
         android:background="#8eb5ff"
         android:gravity="bottom|left"
         android:lineSpacingExtra="1dp"
         android:textSize="18sp"/>
 
+    <!-- gravityにbottomが設定されている場合、paddingが正しく計算できない -->
     <com.example.customview.BoundedText
         android:id="@+id/textView12"
         android:layout_width="250dp"
         android:layout_height="120dp"
         android:layout_marginTop="5dp"
-        android:text="TextView1TextView2TextView3あああ"
+        android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
+        android:paddingBottom="55dp"
         android:background="#8eb5ff"
         android:gravity="bottom|center_horizontal"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
 
+    <!-- gravityにbottomが設定されている場合、paddingが正しく計算できない -->
     <com.example.customview.BoundedText
         android:id="@+id/textView13"
         android:layout_width="250dp"
         android:layout_height="120dp"
         android:layout_marginTop="5dp"
-        android:text="TextView1TextView2TextView3あああ"
+        android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
+        android:paddingBottom="55dp"
         android:background="#8eb5ff"
         android:gravity="bottom|right"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
 
 <!-- X軸 left -->
+    <!-- paddingが正しく計算できる -->
     <com.example.customview.BoundedText
         android:id="@+id/textView14"
         android:layout_width="250dp"
         android:layout_height="120dp"
         android:layout_marginTop="5dp"
-        android:text="TextView1TextView2TextView3あああ"
+        android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
+        android:paddingBottom="55dp"
         android:background="#d6ffd8"
         android:gravity="left|top"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
 
+    <!-- paddingが正しく計算できる -->
     <com.example.customview.BoundedText
         android:id="@+id/textView15"
         android:layout_width="250dp"
         android:layout_height="120dp"
         android:layout_marginTop="5dp"
-        android:text="TextView1TextView2TextView3あああ"
+        android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
+        android:paddingBottom="55dp"
         android:background="#d6ffd8"
         android:gravity="left|center_vertical"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
 
+    <!-- gravityにbottomが設定されている場合、paddingが正しく計算できない -->
     <com.example.customview.BoundedText
         android:id="@+id/textView16"
         android:layout_width="250dp"
         android:layout_height="120dp"
         android:layout_marginTop="5dp"
-        android:text="TextView1TextView2TextView3あああ"
+        android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
+        android:paddingBottom="55dp"
         android:background="#d6ffd8"
         android:gravity="left|bottom"
         android:lineSpacingExtra="4dp"
