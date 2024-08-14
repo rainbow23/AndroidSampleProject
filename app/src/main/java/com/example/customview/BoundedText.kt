@@ -46,7 +46,7 @@ class BoundedText : AppCompatTextView {
         //Log.d("Test1", "onMeasure( widthMeasureSpec: $widthMeasureSpec, heightMeasureSpec: $heightMeasureSpec")
         getLineBounds(0, boundVertical)
 
-        Log.d("Test1", "onMeasure( boundVertical: $boundVertical, boundVertical.top: ${boundVertical.top}, text: $text")
+        Log.d("Test1", "onMeasure( boundVertical.top: ${boundVertical.top}, boundVertical.left: ${boundVertical.left}, boundVertical.right: ${boundVertical.right}, text: $text, boundVertical: $boundVertical")
         //onMeasure( boundVertical: Rect(0, 179 - 523, 255), text: TextView1TextView2TextView3
         //Rect(int left, int top, int right, int bottom)
     }
@@ -65,7 +65,7 @@ class BoundedText : AppCompatTextView {
 
             // Now check remaining lines for min left bound and max right bound.
             for (line in 1 until layout.lineCount) {
-                Log.d("Test11", "line: $line")
+                Log.d("Test1", "onLayout( line: $line")
                 getTightBounds(layout, line, mLineBounds)
                 if (mLineBounds.left < mTextBounds.left) {
                     mTextBounds.left = mLineBounds.left
@@ -74,8 +74,8 @@ class BoundedText : AppCompatTextView {
                     mTextBounds.right = mLineBounds.right
                 }
             }
-            Log.d("Test1", "mTextBounds.top: " + mTextBounds.top)
-            Log.d("Test1", "mTextBounds.bottom: " + mTextBounds.bottom)
+            Log.d("Test1", "onLayout( mTextBounds.top: " + mTextBounds.top)
+            Log.d("Test1", "onLayout( mTextBounds.bottom: " + mTextBounds.bottom)
 
             // Convert pixel values to dp
             val density = resources.displayMetrics.density
@@ -83,10 +83,10 @@ class BoundedText : AppCompatTextView {
             val textBoundsBottomDp = mTextBounds.bottom / density
             val textBoundsLeftDp = mTextBounds.left / density
             val textBoundsRightDp = mTextBounds.right / density
-            Log.d("Test1", "mTextBounds.top (dp): $textBoundsTopDp")
-            Log.d("Test1", "mTextBounds.bottom (dp): $textBoundsBottomDp")
-            Log.d("Test1", "mTextBounds.left (dp): $textBoundsLeftDp")
-            Log.d("Test1", "mTextBounds.right (dp): $textBoundsRightDp")
+            Log.d("Test1", "onLayout( mTextBounds.top (dp): $textBoundsTopDp")
+            Log.d("Test1", "onLayout( mTextBounds.bottom (dp): $textBoundsBottomDp")
+            Log.d("Test1", "onLayout( mTextBounds.left (dp): $textBoundsLeftDp")
+            Log.d("Test1", "onLayout( mTextBounds.right (dp): $textBoundsRightDp")
         }
     }
 
@@ -107,31 +107,6 @@ class BoundedText : AppCompatTextView {
 
         canvas.drawRect(mTextBounds, mRectPaint)
         canvas.restore()
-
-        /*
-        final String s = "Hello. I'm some text!";
-
-        Paint p = new Paint();
-        Rect bounds = new Rect();
-        p.setTextSize(60);
-
-        p.getTextBounds(s, 0, s.length(), bounds);
-        float mt = p.measureText(s);
-        int bw = bounds.width();
-
-        Log.i("LCG", String.format(
-                "measureText %f, getTextBounds %d (%s)",
-                mt,
-                bw, bounds.toShortString())
-        );
-        bounds.offset(0, -bounds.top);
-        p.setStyle(Paint.Style.STROKE);
-        canvas.drawColor(0xff000080);
-        p.setColor(0xffff0000);
-        canvas.drawRect(bounds, p);
-        p.setColor(0xff00ff00);
-        canvas.drawText(s, 0, bounds.bottom, p);
-         */
     }
 
     private fun getTightBounds(layout: Layout, line: Int, bounds: Rect) {
@@ -140,10 +115,7 @@ class BoundedText : AppCompatTextView {
         val s = text.subSequence(firstCharOnLine, lastCharOnLine)
 
         //Log.d("Test1", "getTightBounds( getText(): " + getText());
-        Log.d(
-            "Test1",
-            "getTightBounds( firstCharOnLine: $firstCharOnLine lastCharOnLine: $lastCharOnLine"
-        )
+        Log.d("Test1", "getTightBounds( firstCharOnLine: $firstCharOnLine lastCharOnLine: $lastCharOnLine")
         Log.d("Test1", "getTightBounds( s: " + s + ", s.length() " + s.length)
 
         //getPaint().setTextAlign(Paint.Align.CENTER);
@@ -157,14 +129,9 @@ class BoundedText : AppCompatTextView {
             paint.getTextBounds(s.toString(), 0, s.length, bounds)
         }
         val baseline = layout.getLineBaseline(line)
-        Log.d(
-            "Test1",
-            "getTightBounds( bounds.top: " + bounds.top + ", bounds.bottom: " + bounds.bottom
-        )
+        Log.d("Test1", "getTightBounds( bounds.top: " + bounds.top + ", bounds.bottom: " + bounds.bottom)
         Log.d("Test1", "getTightBounds( baseline: $baseline")
 
-        //bounds.top = baseline;
-        //bounds.bottom = baseline;
         bounds.top = baseline + bounds.top
         bounds.bottom = baseline + bounds.bottom
         //Log.d("Test1", "getTightBounds( bounds.top: " + bounds.top + ", bounds.bottom: " + bounds.bottom);
