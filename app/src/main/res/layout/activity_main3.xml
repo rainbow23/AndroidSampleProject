@@ -1,75 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-<!-- Y軸 top -->
+<!-- Y軸 bottom -->
     <com.example.customview.BoundedText
-        android:id="@+id/textView1"
-        android:layout_width="250dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="5dp"
-        android:text="TextView1TextView2TextView3"
-        android:background="#d6ffd8"
-        android:gravity="top|left"
-        android:lineSpacingExtra="4dp"
-        android:textSize="18sp"/>
-
-    <com.example.customview.BoundedText
-        android:id="@+id/textView2"
-        android:layout_width="250dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="5dp"
-        android:text="TextView1TextView2TextView3"
-        android:background="#d6ffd8"
-        android:gravity="top|center"
-        android:lineSpacingExtra="4dp"
-        android:textSize="18sp"/>
-
-    <com.example.customview.BoundedText
-        android:id="@+id/textView3"
-        android:layout_width="250dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="5dp"
-        android:text="TextView1TextView2TextView3"
-        android:background="#d6ffd8"
-        android:gravity="top|right"
-        android:lineSpacingExtra="4dp"
-        android:textSize="18sp"/>
-
-<!-- Y軸 center -->
-    <com.example.customview.BoundedText
-        android:id="@+id/textView4"
+        android:id="@+id/textView11"
         android:layout_width="250dp"
         android:layout_height="120dp"
         android:text="TextView1TextView2TextView3あああ"
         android:background="#8eb5ff"
-        android:gravity="center_vertical|left"
+        android:gravity="bottom|left"
         android:lineSpacingExtra="1dp"
         android:textSize="18sp"/>
 
     <com.example.customview.BoundedText
-        android:id="@+id/textView5"
+        android:id="@+id/textView12"
         android:layout_width="250dp"
         android:layout_height="120dp"
         android:layout_marginTop="5dp"
         android:text="TextView1TextView2TextView3あああ"
         android:background="#8eb5ff"
-        android:gravity="center_vertical|center_horizontal"
+        android:gravity="bottom|center_horizontal"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
 
     <com.example.customview.BoundedText
-        android:id="@+id/textView6"
+        android:id="@+id/textView13"
         android:layout_width="250dp"
         android:layout_height="120dp"
         android:layout_marginTop="5dp"
         android:text="TextView1TextView2TextView3あああ"
         android:background="#8eb5ff"
-        android:gravity="center_vertical|right"
+        android:gravity="bottom|right"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
 
+<!-- X軸 left -->
+    <com.example.customview.BoundedText
+        android:id="@+id/textView14"
+        android:layout_width="250dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:text="TextView1TextView2TextView3あああ"
+        android:background="#d6ffd8"
+        android:gravity="left|top"
+        android:lineSpacingExtra="4dp"
+        android:textSize="18sp"/>
+
+    <com.example.customview.BoundedText
+        android:id="@+id/textView15"
+        android:layout_width="250dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:text="TextView1TextView2TextView3あああ"
+        android:background="#d6ffd8"
+        android:gravity="left|center_vertical"
+        android:lineSpacingExtra="4dp"
+        android:textSize="18sp"/>
+
+    <com.example.customview.BoundedText
+        android:id="@+id/textView16"
+        android:layout_width="250dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:text="TextView1TextView2TextView3あああ"
+        android:background="#d6ffd8"
+        android:gravity="left|bottom"
+        android:lineSpacingExtra="4dp"
+        android:textSize="18sp"/>
 </LinearLayout>
