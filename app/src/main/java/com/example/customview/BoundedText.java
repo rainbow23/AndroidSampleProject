@@ -12,11 +12,10 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.TextView;
 
-/**
- * This class does not accommodate spanned text.
- */
-@SuppressLint("AppCompatCustomView")
-public class BoundedText extends TextView {
+import androidx.appcompat.widget.AppCompatTextView;
+
+
+public class BoundedText extends AppCompatTextView {
     //public class BoundedText extends androidx.appcompat.widget.AppCompatTextView {
     private final Rect mLineBounds = new Rect();
     private final Rect mTextBounds = new Rect();
@@ -141,11 +140,11 @@ public class BoundedText extends TextView {
         Log.d("Test", "getTightBounds( bounds.top: " + bounds.top + ", bounds.bottom: " + bounds.bottom);
         Log.d("Test", "getTightBounds( baseline: " + baseline);
 
-        bounds.top = baseline;
-        bounds.bottom = baseline;
+        //bounds.top = baseline;
+        //bounds.bottom = baseline;
 
-        //bounds.top = baseline + bounds.top;
-        //bounds.bottom = baseline + bounds.bottom;
+        bounds.top = baseline + bounds.top;
+        bounds.bottom = baseline + bounds.bottom;
         //Log.d("Test", "getTightBounds( bounds.top: " + bounds.top + ", bounds.bottom: " + bounds.bottom);
     }
 }
