@@ -3,24 +3,35 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     >
 
     <com.example.customview.CustomTextView
         android:id="@+id/textView"
         android:layout_width="190dp"
         android:layout_height="180dp"
+        android:text="TextView1TextView2TextView3TextView4TextView4"
+        android:background="#FFDDDDDD"
+        android:gravity="center_horizontal|center_vertical"
+        android:lineSpacingExtra="4dp"
+        android:textSize="18sp"/>
+
+    <com.example.customview.BoundedText
+        android:id="@+id/textView2"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
         android:text="TextView1TextView2TextView3"
         android:background="#FFDDDDDD"
         android:gravity="center_horizontal|center_vertical"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
 
-    <com.example.customview.CustomTextView
+    <com.example.customview.BoundedText
+        android:id="@+id/textView3"
         android:layout_width="190dp"
-        android:layout_height="180dp"
-        android:text="ああああああああああああ"
-        android:background="#FFCCCCCC"
+        android:layout_height="100dp"
+        android:text="TextView1TextView2TextView3"
+        android:background="#FFDDDDDD"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
 </LinearLayout>
