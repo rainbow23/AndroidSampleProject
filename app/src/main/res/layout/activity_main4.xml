@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
 <!-- X軸 center -->
-    <!-- paddingが正しく計算できる -->
+    <!-- paddingBottomが正しく計算できる -->
     <com.example.customview.BoundedText
         android:id="@+id/textView41"
         android:layout_width="250dp"
@@ -18,7 +18,7 @@
         android:lineSpacingExtra="1dp"
         android:textSize="18sp"/>
 
-    <!-- paddingが正しく計算できる -->
+    <!-- paddingBottomが正しく計算できる -->
     <com.example.customview.BoundedText
         android:id="@+id/textView42"
         android:layout_width="250dp"
@@ -31,7 +31,7 @@
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
 
-    <!-- gravityにbottomが設定されている場合、paddingが正しく計算できない -->
+    <!-- gravityにbottomが設定されている場合、paddingBottomが正しく計算できない -->
     <com.example.customview.BoundedText
         android:id="@+id/textView43"
         android:layout_width="250dp"
@@ -45,7 +45,7 @@
         android:textSize="18sp"/>
 
 <!-- X軸 right -->
-    <!-- paddingが正しく計算できる -->
+    <!-- paddingBottomが正しく計算できる -->
     <com.example.customview.BoundedText
         android:id="@+id/textView44"
         android:layout_width="250dp"
@@ -58,7 +58,7 @@
         android:lineSpacingExtra="1dp"
         android:textSize="18sp"/>
 
-    <!-- paddingが正しく計算できる -->
+    <!-- paddingBottomが正しく計算できる -->
     <com.example.customview.BoundedText
         android:id="@+id/textView45"
         android:layout_width="250dp"
@@ -71,7 +71,7 @@
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
 
-    <!-- gravityにbottomが設定されている場合、paddingが正しく計算できない -->
+    <!-- gravityにbottomが設定されている場合、paddingBottomが正しく計算できない -->
     <com.example.customview.BoundedText
         android:id="@+id/textView46"
         android:layout_width="250dp"
