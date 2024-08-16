@@ -12,7 +12,9 @@
         android:id="@+id/textView41"
         android:layout_width="250dp"
         android:layout_height="120dp"
-        android:text="TextView1TextView2TextView3TextView4"
+        android:text="TextView1TextView2
+        TextView3TextView4
+        TextView5"
         android:paddingTop="0dp"
         android:background="#f2f2ff"
         android:gravity="center_horizontal|top"
@@ -23,13 +25,13 @@
     <!-- paddingTopが正しく計算できない -->
     <com.example.customview.BoundedText
         android:id="@+id/textView42"
+        android:layout_marginTop="5dp"
         android:layout_width="250dp"
         android:layout_height="120dp"
-        android:layout_marginTop="5dp"
         android:text="TextView1TextView2
         TextView3TextView4
         TextView5"
-        android:paddingTop="10dp"
+        android:paddingTop="1dp"
         android:background="#f2f2ff"
         android:gravity="center_horizontal|center_vertical"
         android:lineSpacingExtra="4dp"

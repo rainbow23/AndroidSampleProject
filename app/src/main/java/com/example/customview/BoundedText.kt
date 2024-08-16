@@ -119,8 +119,12 @@ class BoundedText : AppCompatTextView {
         //mTextBounds.offset(0, boundVertical.top)
 
         //paddingTopを指定するとgravityが設定、未設定にかかわらず文字の描画領域が正しく取得できない
-       // paddingBottomを指定するとgravityにbottomが設定されている場合、文字の描画領域が正しく取得できない
-       // paddingが未設定の場合、 文字の描画領域を正しく取得できる
+        // paddingBottomを指定するとgravityにbottomが設定されている場合、文字の描画領域が正しく取得できない
+        // paddingが未設定の場合、 文字の描画領域を正しく取得できる
+        // memo
+        // gravityが設定されている状態でpaddingを設定すると正しい値が反映されない
+        // android:paddingTop="1dp"を設定した場合、見た目1dp以上が設定されている
+        //
         Log.d("Test1", "calculatePadding() mPaddingBounds: $mPaddingBounds, mPaddingBounds.top: ${mPaddingBounds.top}, mPaddingBounds.bottom: ${mPaddingBounds.bottom}, mPaddingBounds.right: ${mPaddingBounds.right}, mPaddingBounds.left: ${mPaddingBounds.left}")
     }
 
