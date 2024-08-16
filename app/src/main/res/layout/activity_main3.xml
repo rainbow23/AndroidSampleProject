@@ -13,7 +13,7 @@
         android:layout_height="120dp"
         android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
         android:paddingBottom="55dp"
-        android:background="#8eb5ff"
+        android:background="#f2f2ff"
         android:gravity="bottom|left"
         android:lineSpacingExtra="1dp"
         android:textSize="18sp"/>
@@ -26,7 +26,7 @@
         android:layout_marginTop="5dp"
         android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
         android:paddingBottom="55dp"
-        android:background="#8eb5ff"
+        android:background="#f2f2ff"
         android:gravity="bottom|center_horizontal"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
@@ -39,7 +39,7 @@
         android:layout_marginTop="5dp"
         android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
         android:paddingBottom="55dp"
-        android:background="#8eb5ff"
+        android:background="#f2f2ff"
         android:gravity="bottom|right"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
@@ -53,7 +53,7 @@
         android:layout_marginTop="5dp"
         android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
         android:paddingBottom="55dp"
-        android:background="#d6ffd8"
+        android:background="#f2f2ff"
         android:gravity="left|top"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
@@ -66,7 +66,7 @@
         android:layout_marginTop="5dp"
         android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
         android:paddingBottom="55dp"
-        android:background="#d6ffd8"
+        android:background="#f2f2ff"
         android:gravity="left|center_vertical"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
@@ -79,7 +79,7 @@
         android:layout_marginTop="5dp"
         android:text="TextView1TextView2TextView3TextView4TextView5TextView6ああああ"
         android:paddingBottom="55dp"
-        android:background="#d6ffd8"
+        android:background="#f2f2ff"
         android:gravity="left|bottom"
         android:lineSpacingExtra="4dp"
         android:textSize="18sp"/>
