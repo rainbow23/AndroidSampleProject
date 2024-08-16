@@ -106,18 +106,21 @@ class BoundedText : AppCompatTextView {
     private fun calculatePadding() {
         Log.d("Test1", "calculatePadding() paddingTop: $paddingTop, paddingBottom: $paddingBottom, paddingLeft: $paddingLeft, paddingRight: $paddingRight")
 
-        //val top = this.top - paddingTop
+        val top = 0 + paddingTop
         val bottom = this.height - paddingBottom
         val left = this.left - paddingLeft
         val right = this.right - paddingRight
 
-        mPaddingBounds.top = 0
+        mPaddingBounds.top = top
         mPaddingBounds.bottom =  bottom
         mPaddingBounds.left = left
         mPaddingBounds.right = right
 
         //mTextBounds.offset(0, boundVertical.top)
 
+        //paddingTopを指定するとgravityが設定、未設定にかかわらず文字の描画領域が正しく取得できない
+       // paddingBottomを指定するとgravityにbottomが設定されている場合、文字の描画領域が正しく取得できない
+       // paddingが未設定の場合、 文字の描画領域を正しく取得できる
         Log.d("Test1", "calculatePadding() mPaddingBounds: $mPaddingBounds, mPaddingBounds.top: ${mPaddingBounds.top}, mPaddingBounds.bottom: ${mPaddingBounds.bottom}, mPaddingBounds.right: ${mPaddingBounds.right}, mPaddingBounds.left: ${mPaddingBounds.left}")
     }
 
