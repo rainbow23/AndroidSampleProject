@@ -17,6 +17,9 @@ class BoundedText : AppCompatTextView {
     private val mTextBounds = Rect()
     private val mRectPaint = Paint()
 
+    private val mPaddingBounds = Rect()
+    private val mPaddingPaint = Paint()
+
     constructor(context: Context?) : super(context!!) {
         init()
     }
@@ -37,6 +40,10 @@ class BoundedText : AppCompatTextView {
         mRectPaint.style = Paint.Style.STROKE
         mRectPaint.strokeWidth = 1f
         mRectPaint.color = Color.RED
+
+        mPaddingPaint.style = Paint.Style.STROKE
+        mPaddingPaint.strokeWidth = 1f
+        mPaddingPaint.color = Color.GREEN
     }
 
     private val boundVertical = Rect()
@@ -46,14 +53,14 @@ class BoundedText : AppCompatTextView {
         //Log.d("Test1", "onMeasure( widthMeasureSpec: $widthMeasureSpec, heightMeasureSpec: $heightMeasureSpec")
         getLineBounds(0, boundVertical)
 
-        Log.d("Test1", "onMeasure( boundVertical.top: ${boundVertical.top}, boundVertical.left: ${boundVertical.left}, boundVertical.right: ${boundVertical.right}, text: $text, boundVertical: $boundVertical")
+        //Log.d("Test1", "onMeasure( boundVertical.top: ${boundVertical.top}, boundVertical.left: ${boundVertical.left}, boundVertical.right: ${boundVertical.right}, text: $text, boundVertical: $boundVertical")
         //onMeasure( boundVertical: Rect(0, 179 - 523, 255), text: TextView1TextView2TextView3
         //Rect(int left, int top, int right, int bottom)
     }
 
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
         super.onLayout(changed, left, top, right, bottom)
-        Log.d("Test1", "onLayout( changed: $changed, left: $left, top: $top, right: $right, bottom: $bottom")
+        //Log.d("Test1", "onLayout( changed: $changed, left: $left, top: $top, right: $right, bottom: $bottom")
 
         // X方向のずれを修正したい： leftは0なので取得できない
         val rect = Rect()
@@ -96,9 +103,27 @@ class BoundedText : AppCompatTextView {
         }
     }
 
+    private fun calculatePadding() {
+        Log.d("Test1", "calculatePadding() paddingTop: $paddingTop, paddingBottom: $paddingBottom, paddingLeft: $paddingLeft, paddingRight: $paddingRight")
+
+        //val top = this.top - paddingTop
+        val bottom = this.height - paddingBottom
+        val left = this.left - paddingLeft
+        val right = this.right - paddingRight
+
+        mPaddingBounds.top = 0
+        mPaddingBounds.bottom =  bottom
+        mPaddingBounds.left = left
+        mPaddingBounds.right = right
+
+        //mTextBounds.offset(0, boundVertical.top)
+
+        Log.d("Test1", "calculatePadding() mPaddingBounds: $mPaddingBounds, mPaddingBounds.top: ${mPaddingBounds.top}, mPaddingBounds.bottom: ${mPaddingBounds.bottom}, mPaddingBounds.right: ${mPaddingBounds.right}, mPaddingBounds.left: ${mPaddingBounds.left}")
+    }
+
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        Log.d("Test1", "onDraw(")
+        Log.d("Test1", "onDraw( -------------------------- start -------------------")
 
         canvas.save()
         canvas.translate(paddingLeft.toFloat(), paddingTop.toFloat())
@@ -111,7 +136,12 @@ class BoundedText : AppCompatTextView {
         //onDraw( mTextBounds: Rect(1, 16 - 518, 123), mTextBounds.top: 16
         //Rect(int left, int top, int right, int bottom)
 
+        calculatePadding()
+
         canvas.drawRect(mTextBounds, mRectPaint)
+        // padding Rect
+        canvas.drawRect(mPaddingBounds, mPaddingPaint)
+
         canvas.restore()
     }
 
