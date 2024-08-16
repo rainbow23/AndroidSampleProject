@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="addGravity1">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center_horizontal|top</item>
+    </style>
+
+    <style name="addGravity2">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+    </style>
+
+    <style name="addGravity3">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+    </style>
+
+    <style name="addGravity4">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left|top</item>
+    </style>
+
+    <style name="addGravity5">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+    <style name="addGravity6">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left|bottom</item>
+    </style>
+</resources>

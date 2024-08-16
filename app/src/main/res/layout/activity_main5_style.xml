@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- styleにgravityを設定した場合、正しく反映される -->
+    <com.example.customview.BoundedText
+        android:id="@+id/textView51"
+        android:layout_width="250dp"
+        android:layout_height="120dp"
+        android:text="TextView1TextView2
+        TextView3TextView4
+        TextView5"
+        android:background="#f2f2ff"
+        android:lineSpacingExtra="1dp"
+        style="@style/addGravity6"
+        />
+
+    <!-- gravityを直に設定した場合、正しく反映される -->
+    <com.example.customview.BoundedText
+        android:id="@+id/textView52"
+        android:layout_marginTop="5dp"
+        android:layout_width="250dp"
+        android:layout_height="120dp"
+        android:text="TextView1TextView2
+        TextView3TextView4
+        TextView5"
+        android:background="#f2f2ff"
+        android:lineSpacingExtra="1dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="18sp"/>
+</LinearLayout>
