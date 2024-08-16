@@ -1,5 +1,6 @@
 package com.example.customview
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
@@ -10,8 +11,11 @@ import android.os.Build
 import android.text.Layout
 import android.util.AttributeSet
 import android.util.Log
+import android.widget.TextView
 
-class BoundedText : AppCompatTextView {
+@SuppressLint("AppCompatCustomView")
+class BoundedText : TextView {
+//class BoundedText : AppCompatTextView {
     //public class BoundedText extends androidx.appcompat.widget.AppCompatTextView {
     private val mLineBounds = Rect()
     private val mTextBounds = Rect()
