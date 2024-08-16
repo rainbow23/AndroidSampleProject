@@ -14,8 +14,8 @@ import android.util.Log
 import android.widget.TextView
 
 @SuppressLint("AppCompatCustomView")
-//class BoundedText : TextView {
-class BoundedText : AppCompatTextView {
+class BoundedText : TextView {
+//class BoundedText : AppCompatTextView {
     //public class BoundedText extends androidx.appcompat.widget.AppCompatTextView {
     private val mLineBounds = Rect()
     private val mTextBounds = Rect()
@@ -65,7 +65,6 @@ class BoundedText : AppCompatTextView {
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
         super.onLayout(changed, left, top, right, bottom)
         //Log.d("Test1", "onLayout( changed: $changed, left: $left, top: $top, right: $right, bottom: $bottom")
-
         // X方向のずれを修正したい： leftは0なので取得できない
         val rect = Rect()
         getLineBounds(0, rect)
@@ -142,6 +141,9 @@ class BoundedText : AppCompatTextView {
         // AppCompatTextViewを継承したカスタムViewのケース
         //  styleにtextFontWeightがある場合　＞　反映されない
         //  xmlレイアウトファイルにtextFontWeightを設定した場合 > 反映されない
+
+        // BoundedTextにTextViewを継承した場合の動作確認
+        // gravityの設定は正しく反映されることを確認
 
 
         // memo ------------------------
