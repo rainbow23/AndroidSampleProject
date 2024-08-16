@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="addtextFontWeight1">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
     <style name="addGravity1">
         <item name="android:textSize">18sp</item>
         <item name="android:gravity">center_horizontal|top</item>

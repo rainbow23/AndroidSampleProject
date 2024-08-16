@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- styleにgravityを設定した場合、正しく反映される -->
+    <!-- AppCompatTextViewを継承したクラスの場合、styleに定義しているtextFontWeightが反映されない -->
+    <!-- TextViewを継承したクラスの場合、textFontWeightが反映される -->
     <com.example.customview.BoundedText
         android:id="@+id/textView51"
         android:layout_width="250dp"
@@ -15,10 +16,11 @@
         TextView5"
         android:background="#f2f2ff"
         android:lineSpacingExtra="1dp"
-        style="@style/addGravity6"
+        style="@style/addtextFontWeight1"
         />
 
-    <!-- gravityを直に設定した場合、正しく反映される -->
+    <!-- AppCompatTextViewを継承したクラスの場合、textFontWeightが反映されない -->
+    <!-- TextViewを継承したクラスの場合、textFontWeightが反映される -->
     <com.example.customview.BoundedText
         android:id="@+id/textView52"
         android:layout_marginTop="5dp"
@@ -30,5 +32,22 @@
         android:background="#f2f2ff"
         android:lineSpacingExtra="1dp"
         android:gravity="center_horizontal|center_vertical"
+        android:textFontWeight="500"
+        android:textSize="18sp"/>
+
+    <!-- AppCompatTextViewを継承したクラスの場合、fontWeightが反映されない -->
+    <!-- TextViewを継承したクラスの場合、fontWeightが反映されない -->
+    <com.example.customview.BoundedText
+        android:id="@+id/textView53"
+        android:layout_marginTop="5dp"
+        android:layout_width="250dp"
+        android:layout_height="120dp"
+        android:text="TextView1TextView2
+        TextView3TextView4
+        TextView5"
+        android:background="#f2f2ff"
+        android:lineSpacingExtra="1dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:fontWeight="500"
         android:textSize="18sp"/>
 </LinearLayout>

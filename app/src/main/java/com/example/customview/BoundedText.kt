@@ -1,5 +1,6 @@
 package com.example.customview
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
@@ -10,7 +11,10 @@ import android.os.Build
 import android.text.Layout
 import android.util.AttributeSet
 import android.util.Log
+import android.widget.TextView
 
+@SuppressLint("AppCompatCustomView")
+//class BoundedText : TextView {
 class BoundedText : AppCompatTextView {
     //public class BoundedText extends androidx.appcompat.widget.AppCompatTextView {
     private val mLineBounds = Rect()
@@ -122,14 +126,25 @@ class BoundedText : AppCompatTextView {
         // paddingBottomを指定するとgravityにbottomが設定されている場合、文字の描画領域が正しく取得できない
         // paddingが未設定の場合、 文字の描画領域を正しく取得できる
 
-        // memo
+        // memo ------------------------
         // padding
         // gravityが設定されている状態でpaddingを設定すると正しい値が反映されない
         // android:paddingTop="1dp"を設定した場合、見た目1dp以上が設定されている
+
         // style & gravity
         // xmlレイアウトファイルにstyleを適応した場合、styleに設定しているgravityは正しく反映される
         // プログラムで指定した場合はstyleに設定しているgravityは正しく反映されない？
+
         // fontWeight
+        // TextViewを継承したカスタムViewのケース
+        //  styleにtextFontWeightがある場合　＞　反映される
+        //  xmlレイアウトファイルにtextFontWeightを設定した場合 > 反映される
+        // AppCompatTextViewを継承したカスタムViewのケース
+        //  styleにtextFontWeightがある場合　＞　反映されない
+        //  xmlレイアウトファイルにtextFontWeightを設定した場合 > 反映されない
+
+
+        // memo ------------------------
         Log.d("Test1", "calculatePadding() mPaddingBounds: $mPaddingBounds, mPaddingBounds.top: ${mPaddingBounds.top}, mPaddingBounds.bottom: ${mPaddingBounds.bottom}, mPaddingBounds.right: ${mPaddingBounds.right}, mPaddingBounds.left: ${mPaddingBounds.left}")
     }
 
