@@ -1,0 +1,19 @@
+// memo ------------------------
+// padding
+// gravityが設定されている状態でpaddingを設定すると正しい値が反映されない
+// android:paddingTop="1dp"を設定した場合、見た目1dp以上が設定されている
+
+// style & gravity
+// xmlレイアウトファイルにstyleを適応した場合、styleに設定しているgravityは正しく反映される
+// プログラムで指定した場合はstyleに設定しているgravityは正しく反映されない？
+
+// fontWeight
+// TextViewを継承したカスタムViewのケース
+//  styleにtextFontWeightがある場合　＞　反映される
+//  xmlレイアウトファイルにtextFontWeightを設定した場合 > 反映される
+// AppCompatTextViewを継承したカスタムViewのケース
+//  styleにtextFontWeightがある場合　＞　反映されない
+//  xmlレイアウトファイルにtextFontWeightを設定した場合 > 反映されない
+
+// BoundedTextにTextViewを継承した場合の動作確認
+// gravityの設定は正しく反映されることを確認
