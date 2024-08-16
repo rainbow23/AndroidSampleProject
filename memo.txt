@@ -4,8 +4,10 @@
 // android:paddingTop="1dp"を設定した場合、見た目1dp以上が設定されている
 
 // style & gravity
-// xmlレイアウトファイルにstyleを適応した場合、styleに設定しているgravityは正しく反映される
-// プログラムで指定した場合はstyleに設定しているgravityは正しく反映されない？
+//  xmlレイアウトファイルにstyleを適応した場合、styleに設定しているgravityは正しく反映される
+//  ↑の検証環境：TextView && AppCompatTextViewを継承したカスタムTextView
+//  プログラムで指定した場合はstyleに設定しているgravityは正しく反映されない
+//  ↑の検証環境：TextView && AppCompatTextViewを継承したカスタムTextView
 
 // fontWeight
 // TextViewを継承したカスタムViewのケース
@@ -17,3 +19,10 @@
 
 // BoundedTextにTextViewを継承した場合の動作確認
 // gravityの設定は正しく反映されることを確認
+
+-----------------
+
+対応まとめ
+1. TextViewを継承したカスタムViewを使用する(AppCompatTextViewは使用しない)
+2. gravityが設定されており、かつpaddingも設定されている場合は縦のはみ出しチェックは正しく判定できない
+3. textFontWeightはTextViewを継承した場合に反映される（AppCompatTextViewを継承したカスタムビューでは反映されない）
